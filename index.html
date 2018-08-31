@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to add jQuery IntelliSense to a Visual Studio Code JavaScript file</title>
+    <title>Dashboard Minecraft</title>
 
     <!-- Bootstrap CSS -->
     <!--link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">-->
@@ -29,31 +29,79 @@
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-6">
-                <h2 class="text-center">Cluster</h2>
+                <h2 class="text-center">Servidores</h2>
                 <hr>
-                <div class="form-group">
-                    <label for="comment">Info:</label>
-                    <textarea class="form-control" rows="5" id="infoCl"></textarea>
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>Nome</th>
+                                <th>Qtd. Jogadores</th>
+                                <th>Ping</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo 
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Ver
+                                        </button>
+                                </td>
+                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-danger">Remover</button></td>
+                            </tr>
+                             <tr   >
+                                <td colspan="5" >
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                                Participantes
+                                                <ul>
+                                                    <li>Justguerra</li>
+                                                    <li>Ricardo</li>
+                                                    <li>Paulo</li>
+                                                </ul>
+                                        </div>
+                                    </div>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-danger">Remover</button></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="comment">Nome:</label>
+                        <input type="text" class="form-control" id="srvName" />
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="teste()" class="btn btn-success">Adicionar</button>
+                    </div>
                 </div>
 
             </div>
+
             <div class="col-md-6">
-                <h2 class="text-center">Servidores</h2>
+                <h2 class="text-center">Minecraft</h2>
                 <hr>
-                <div class="form-group">
-                    <label for="comment">Info:</label>
-                    <textarea class="form-control" rows="5" id="infoSr"></textarea>
-                </div>
-                <div class="col-md-12">
-                        <div class="col-md-6">
-                            <button type="button" onclick="teste()" class="btn btn-success btn-block">Adicionar</button>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-danger btn-block">Remover</button>
-                        </div>
-                    </div>
+
+
             </div>
         </div>
+
+
+    </div>
     </div>
 
     <!-- jQuery -->
@@ -65,8 +113,8 @@
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <script>
-        $(document).ready(function() {
-            managedClusters();
+        $(document).ready(function () {
+            //managedClusters();
         });
     </script>
 </body>
