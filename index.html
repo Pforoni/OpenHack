@@ -32,7 +32,7 @@
                 <h2 class="text-center">Servidores</h2>
                 <hr>
                 <div class="row">
-                    <table class="table table-hover">
+                    <table id="tbServer" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>IP</th>
@@ -43,39 +43,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo 
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Ver
-                                        </button>
-                                </td>
-                                <td>@mdo</td>
-                                <td><button type="button" class="btn btn-danger">Remover</button></td>
-                            </tr>
-                             <tr   >
-                                <td colspan="5" >
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                                Participantes
-                                                <ul>
-                                                    <li>Justguerra</li>
-                                                    <li>Ricardo</li>
-                                                    <li>Paulo</li>
-                                                </ul>
-                                        </div>
-                                    </div>  
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@mdo</td>
-                                <td><button type="button" class="btn btn-danger">Remover</button></td>
-                            </tr>
-
+                            
                         </tbody>
                     </table>
                 </div>
@@ -115,6 +83,7 @@
     <script>
         $(document).ready(function () {
             //managedClusters();
+            geraLista();
         });
     </script>
 </body>
