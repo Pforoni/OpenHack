@@ -82,28 +82,37 @@ var lista = [
     }
 ]
 
+function deletaPod(vl) {
+    console.log(vl.id);
+}
+
+function criaPod(){
+    
+    if($("#nameSrv").val().length){
+        alert($("#nameSrv").val());
+    }
+    else{
+        alert('Nome do servidor não informado!!!');
+        return false;
+    }
+
+}
+
 function geraLista() {
     var trHTML = '';
-    debugger;
-    
-
 
     $.each(lista, function (i, item) {
-        debugger;
         listJog = "";
         if (item.status.data.players.list.length) {
             $.each(item.status.data.players.list, function (i, item) {
-                debugger;
-                listJog += '<li>'+ item.name +'</li>';
+                listJog += '<li>' + item.name + '</li>';
             });
         }
-        
-       // var btn = '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-' + i + '" aria-expanded="true" aria-controls="collapseOne">Ver</button>';
-      
+
         trHTML += '<tr><td>' + item.endpoints.minecraft + '</td><td>' + item.name + '</td><td>' +
             item.status.data.players.activePlayers + '/' + item.status.data.players.limitPlayers +
-            
-            '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-' + i + '" aria-expanded="true" aria-controls="collapse-' + i + '"">Ver</button>'+
+
+            '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-' + i + '" aria-expanded="true" aria-controls="collapse-' + i + '"">Ver</button>' +
 
             '<div id="collapse-' + i + '" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">' +
             '<div class="card-body">' +
@@ -111,8 +120,8 @@ function geraLista() {
             listJog +
             '</ul>' +
             '</div>' +
-            '</div>'+
-            '</td><td>' + item.status.data.ping + '</td><td><button type="button" class="btn btn-danger">Remover</button></td></tr>';
+            '</div>' +
+            '</td><td>' + item.status.data.ping + '</td><td><button id="' + item.name + '" type="button" class="btn btn-danger" onclick="deletaPod(this)">Remover</button></td></tr>';
 
     });
 

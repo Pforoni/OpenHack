@@ -21,56 +21,53 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <h1 class="text-center">Dashboard
-        </h1>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-6">
-                <h2 class="text-center">Servidores</h2>
-                <hr>
-                <div class="row">
-                    <table id="tbServer" class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>IP</th>
-                                <th>Nome</th>
-                                <th>Qtd. Jogadores</th>
-                                <th>Ping</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="comment">Nome:</label>
-                        <input type="text" class="form-control" id="srvName" />
-                    </div>
-                    <div class="form-group">
-                        <button type="button" onclick="teste()" class="btn btn-success">Adicionar</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6">
-                <h2 class="text-center">Minecraft</h2>
-                <hr>
-
-
-            </div>
+    <div class="container">
+        <div class="jumbotron" style="margin-top: 10px;">
+            <h1 class="text-center">Servidores Minecraft
+            </h1>
+            
         </div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="">
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group" style="margin-bottom: 30px;">
+                                <input type="text" id="nameSrv" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" onclick="criaPod('teste')" class="btn btn-success">Adicionar Servidor</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table id="tbServer" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>IP</th>
+                                    <th>Nome</th>
+                                    <th>Qtd. Jogadores</th>
+                                    <th>Ping</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
     </div>
-    </div>
+
 
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
